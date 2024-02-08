@@ -15,50 +15,51 @@
     
       <div class="w-80 d-flex justify-content-center">
     
-        <form action="/create-staff1" method="post" enctype="multipart/form-data">
+        <form action="/post-create-staff" method="post" enctype="multipart/form-data">
         @csrf
     
         <div class="mb-3">
-            <label for="nama" class="form-label">Nama karyawan</label>
+            <label for="nama" class="form-label">Name</label>
             <input type="text" class="form-control" id="nama" name="nama" value="{{old('nama')}}">
             @error('nama')
-              <p style="color: red;">Nama invalid</p>
+              <p style="color: red;">Invalid name</p>
             @enderror
         </div>
     
         <div class="mb-3">
-            <label for="umur" class="form-label">Umur karyawan</label>
+            <label for="umur" class="form-label">Age</label>
             <input type="number" class="form-control" id="umur" name="umur" value="{{old('umur')}}">
             @error('umur')
-              <p style="color: red;">Umur tidak memenuhi</p>
+              <p style="color: red;">Invalid age</p>
             @enderror
         </div>
     
         <div class="mb-3">
-            <label for="alamat" class="form-label">Alamat karyawan</label>
+            <label for="alamat" class="form-label">Address</label>
             <input type="text" class="form-control" id="alamat" name="alamat" value="{{old('alamat')}}">
             @error('alamat')
-              <p style="color: red;">Alamat invalid</p>
+              <p style="color: red;">Invalid address</p>
             @enderror
         </div>
     
         <div class="mb-3">
-            <label for="nomor" class="form-label">No. Telp karyawan</label>
+            <label for="nomor" class="form-label">Phone Number</label>
             <input type="number" class="form-control" id="nomor" name="nomor" value="{{old('nomor')}}">
             @error('nomor')
-              <p style="color: red;">Nomor telfon invalid</p>
+              <p style="color: red;">Invalid Phone Number/Start with "08"</p>
             @enderror
         </div>
     
         <div class="mb-3">
-          <label for="image" class="form-label">Foto karyawan</label>
+          <label for="image" class="form-label">Self Photo</label>
           <input type="file" class="form-control" id="image" name="image">
           @error('image')
-              <p style="color: red;">Image invalid</p>
+              <p style="color: red;">Image can't be empty</p>
             @enderror
       </div>
     
       <div class="mb-3">
+        <label for="image" class="form-label">Category Name</label>
         <select class="form-select" aria-label="Default select example" name="CategoryId">
             <option selected style="display: none;"></option>
             @foreach ($categories as $c)
@@ -66,7 +67,7 @@
             @endforeach
         </select>
         @error('CategoryId')
-            <p style="color: red;">The Category field is required.</p>
+            <p style="color: red;">Please select a category</p>
         @enderror
     
       </div>

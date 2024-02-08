@@ -21,11 +21,11 @@ Route::get('/', [StaffController::class, 'home']);
 Route::get('/home', [StaffController::class, 'home']);
 
 Route::get('/create-staff', [StaffController::class, 'createStaff']);
-Route::post('/create-staff1', [StaffController::class, 'createStaff1']);
+Route::post('/post-create-staff', [StaffController::class, 'createStaff1']);
 Route::get('/edit-staff/{id}', [StaffController::class, 'editStaff']);
 Route::patch('/update-staff/{id}', [StaffController::class, 'updateStaff']);
 Route::delete('/delete-staff/{id}', [StaffController::class, 'deleteStaff']);
 
 //Category
 Route::get('/create-category', [CategoryController::class, 'createCategory']);
-Route::post('/create-category1', [CategoryController::class, 'createCategory1']);
+Route::post('/post-create-category', [CategoryController::class, 'createCategory1']);

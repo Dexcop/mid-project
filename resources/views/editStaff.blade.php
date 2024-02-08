@@ -21,42 +21,42 @@
     @method('patch')
     
     <div class="mb-3">
-        <label for="nama" class="form-label">Nama karyawan</label>
+        <label for="nama" class="form-label">Staff Name</label>
         <input type="text" class="form-control" id="nama" name="nama" value="{{$staffs->nama}}">
         @error('nama')
-          <p style="color: red;">Nama invalid</p>
+          <p style="color: red;">Invalid Name</p>
         @enderror
     </div>
     
     <div class="mb-3">
-        <label for="umur" class="form-label">Umur karyawan</label>
+        <label for="umur" class="form-label">Staff Age</label>
         <input type="number" class="form-control" id="umur" name="umur" value="{{$staffs->umur}}">
         @error('umur')
-          <p style="color: red;">Umur tidak memenuhi</p>
+          <p style="color: red;">Invalid Age</p>
         @enderror
     </div>
 
     <div class="mb-3">
-        <label for="alamat" class="form-label">Alamat karyawan</label>
+        <label for="alamat" class="form-label">Staff Address</label>
         <input type="text" class="form-control" id="alamat" name="alamat" value="{{$staffs->alamat}}">
         @error('alamat')
-          <p style="color: red;">Alamat invalid</p>
+          <p style="color: red;">Invalid Address</p>
         @enderror
     </div>
     
     <div class="mb-3">
-        <label for="nomor" class="form-label">No. Telp karyawan</label>
+        <label for="nomor" class="form-label">Staff Phone Number</label>
         <input type="number" class="form-control" id="nomor" name="nomor" value="{{$staffs->nomor}}">
         @error('nomor')
-          <p style="color: red;">Nomor telfon invalid</p>
+          <p style="color: red;">Invalid Phone Number/Start with "08"</p>
         @enderror
     </div>
     
     <div class="mb-3">
-      <label for="image" class="form-label">Foto karyawan</label>
+      <label for="image" class="form-label">Self Photo</label>
       <input type="file" class="form-control" id="image" name="image" value="{{$staffs->image}}">
       @error('image')
-          <p style="color: red;">Image invalid</p>
+          <p style="color: red;">Invalid Image</p>
         @enderror
     </div>
         

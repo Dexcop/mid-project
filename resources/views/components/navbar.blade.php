@@ -11,7 +11,7 @@
         
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/create-staff">Create</a>
+            <a class="nav-link active" aria-current="page" href="/create-staff">Register</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/create-category">Category</a>

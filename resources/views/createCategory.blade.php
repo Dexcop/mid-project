@@ -15,14 +15,14 @@
     
       <div class="w-80 d-flex justify-content-center">
     
-        <form action="/create-category1" method="post">
+        <form action="/post-create-category" method="post">
         @csrf
     
         <div class="mb-3">
             <label for="nama" class="form-label">Category Name</label>
               <input type="text" class="form-control" id="nama" aria-describedby="emailHelp" name="nama" value="{{ old('nama') }}">
               @error('nama')
-                <p style="color: red;">The Category field is required.</p>
+                <p style="color: red;">The category name can't be empty.</p>
               @enderror
         </div>
     

@@ -37,7 +37,7 @@
     </div>
   
     @empty
-      <p>Data is empty</p>    
+      <p>Data is empty, start by clicking 'Register'!</p>    
     @endforelse
   
   </div>
