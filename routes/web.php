@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StaffController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +14,18 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/', [StaffController::class, 'home']);
+// Route::get('/', function () {
+//     return view('home');
+// });
+Route::get('/home', [StaffController::class, 'home']);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/create-staff', [StaffController::class, 'createStaff']);
+Route::post('/create-staff1', [StaffController::class, 'createStaff1']);
+Route::get('/edit-staff/{id}', [StaffController::class, 'editStaff']);
+Route::patch('/update-staff/{id}', [StaffController::class, 'updateStaff']);
+Route::delete('/delete-staff/{id}', [StaffController::class, 'deleteStaff']);
+
+//Category
+Route::get('/create-category', [CategoryController::class, 'createCategory']);
+Route::post('/create-category1', [CategoryController::class, 'createCategory1']);
